@@ -1,7 +1,4 @@
-package section6;
-
-import javax.swing.text.Caret;
-import java.util.Scanner;
+package A_JavaBasics.section6;
 
 public class Main {
     public static void main(String[] args) {

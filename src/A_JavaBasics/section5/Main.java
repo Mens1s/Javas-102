@@ -1,4 +1,4 @@
-package section5;
+package A_JavaBasics.section5;
 
 public class Main {
     public static void main(String[] args) {

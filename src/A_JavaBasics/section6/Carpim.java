@@ -1,4 +1,4 @@
-package section6;
+package A_JavaBasics.section6;
 
 public class Carpim {
     void carpim(){

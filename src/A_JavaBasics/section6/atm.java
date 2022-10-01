@@ -1,4 +1,4 @@
-package section6;
+package A_JavaBasics.section6;
 
 import java.util.Objects;
 import java.util.Scanner;

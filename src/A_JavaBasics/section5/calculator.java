@@ -1,4 +1,4 @@
-package section5;
+package A_JavaBasics.section5;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package section7;
+package A_JavaBasics.section7;
 
 public class findEbob {
     public static int ebob(int a, int b) {

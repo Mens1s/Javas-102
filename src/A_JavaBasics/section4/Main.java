@@ -1,4 +1,4 @@
-package section4;
+package A_JavaBasics.section4;
 public class Main {
     public static void main(String[] args) {
         new bodyMass_calculator().bmCal();
