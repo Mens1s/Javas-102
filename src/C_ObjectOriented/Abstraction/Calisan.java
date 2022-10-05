@@ -1,6 +1,6 @@
-package C_ObjectOriented.Inheritance;
+package C_ObjectOriented.Abstraction;
 
-public class Calisan {
+public abstract class Calisan {
     private String adSoyad;
     private String telefon;
     private String eposta;

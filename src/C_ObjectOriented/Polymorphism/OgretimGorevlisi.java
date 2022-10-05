@@ -1,6 +1,6 @@
-package C_ObjectOriented.Inheritance;
+package C_ObjectOriented.Polymorphism;
 
-public class OgretimGorevlisi extends Akademisyen{
+public class OgretimGorevlisi extends Akademisyen {
     private String kapiNo;
     public OgretimGorevlisi(String adSoyad, String telefon, String eposta, String bolum, String unvan, String kapiNo) {
         super(adSoyad, telefon, eposta, bolum, unvan);
@@ -8,9 +8,10 @@ public class OgretimGorevlisi extends Akademisyen{
     }
 
     public String getKapiNo() {return kapiNo;}
+
     @Override
     public void giris(){
-        super.giris();
-        System.out.println("Ogretim gorevlisi giris yapti inanir misin? "); }
+        System.out.println(this.getAdSoyad() + " ogretim elemani B-1 kapisindan giris yapti..");
+    }
     public void setKapiNo(String kapiNo) {this.kapiNo = kapiNo;}
 }

@@ -1,4 +1,4 @@
-package C_ObjectOriented.Inheritance;
+package C_ObjectOriented.Polymorphism;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +10,11 @@ public class Main {
         bilgiIslem b1 = new bilgiIslem("a1","a","21","21","12","12");
         guvenlikGorevlisi g1 = new guvenlikGorevlisi("ua","as","21","3123","213","21313");
 
-        o1.giris();
+        // polymorphism => bir sinifin cok bicimli calismasi kalitim olmak zorunda
+        // override edilmis metodlara erisebilir
+        Calisan[] loginUser = {c1, a1, m1, o1};
+
+        Calisan.girisYapanlar(loginUser);
+
     }
 }

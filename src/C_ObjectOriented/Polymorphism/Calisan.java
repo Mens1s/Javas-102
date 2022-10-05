@@ -1,4 +1,4 @@
-package C_ObjectOriented.Inheritance;
+package C_ObjectOriented.Polymorphism;
 
 public class Calisan {
     private String adSoyad;
@@ -21,7 +21,7 @@ public class Calisan {
     public void setEposta(String eposta) {this.eposta = eposta;}
 
     public void giris(){
-        System.out.println(this.getAdSoyad() + "üniye giris yapti");
+        System.out.println(this.getAdSoyad() + " uniye giris yapti");
     }
     public void giris(String girisSaati){System.out.println(this.getAdSoyad() + " uniye " + girisSaati + " bu saatte giris yapti." );}
     public void cikis(){
@@ -29,5 +29,11 @@ public class Calisan {
     }
     public void yemekhane(){
         System.out.println(this.getAdSoyad() + "yemekhaneye girdi");
+    }
+
+    public static void girisYapanlar(Calisan[] loginUsers){
+        for (Calisan user:loginUsers) {
+            user.giris();
+        }
     }
 }
