@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 import java.util.Scanner;
 

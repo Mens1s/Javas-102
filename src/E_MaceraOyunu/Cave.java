@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public class Cave extends BattleLoc{
     public Cave(Player player) {

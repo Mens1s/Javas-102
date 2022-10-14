@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public class River extends BattleLoc{
     public River(Player player) {

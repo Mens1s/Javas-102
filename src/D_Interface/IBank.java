@@ -1,4 +1,4 @@
-package Interface;
+package D_Interface;
 
 public interface IBank {
     final String hostIpAdress = "127.0.0.1";

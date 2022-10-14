@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public class SafeHouse extends NormalLoc{
     public SafeHouse(Player player){

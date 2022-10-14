@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public abstract class Location {
     private Player player;

@@ -1,4 +1,4 @@
-package Interface;
+package D_Interface;
 
 public class BBank implements IBank{
     private String bankaAdi;

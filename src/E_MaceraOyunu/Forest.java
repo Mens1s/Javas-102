@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public class Forest extends BattleLoc{
     public Forest(Player player) {

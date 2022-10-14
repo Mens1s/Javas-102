@@ -1,4 +1,4 @@
-package MaceraOyunu;
+package E_MaceraOyunu;
 
 public class Zombi extends Obstacle{
     public Zombi() {
