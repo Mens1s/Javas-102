@@ -33,13 +33,34 @@ public class Main {
         NullableGeneric<Integer> a = new NullableGeneric<>(d);
         a.run();
 
-
-        Integer[] arr = {1,2,3};
+        // generic arrays
+        Integer[] arr = {1,2,3,4};
         Sol<Integer> sol = new Sol<>(arr);
         sol.printArray();
         String[] arr1 = {"Hello", "World"};
         Sol<String> sol1 = new Sol<>(arr1);
         sol1.printArray();
+
+
+        // generic methods
+        String[] arrStr = {"Java","102", "patika","Dev"};
+        Character[] arrChar = {'a', 'b', 'c', 'd', 'e'};
+
+        GenericMethod<Integer> intGeneric = new GenericMethod<>(arr);
+        GenericMethod<String> strGeneric = new GenericMethod<>(arrStr);
+        GenericMethod<Character> charGeneric = new GenericMethod<>(arrChar);
+
+        Print.printArr(arr);
+        Print.printArr(arrStr);
+        Print.printArr(arrChar);
+        intGeneric.run();
+        strGeneric.run();
+        charGeneric.run();
+
+        // generic interface
+        Student<String> stu = new Student<>();
+
+        // bounded types
 
     }
 }
