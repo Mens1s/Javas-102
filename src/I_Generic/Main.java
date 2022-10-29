@@ -10,7 +10,7 @@ public class Main {
         String s2 = "hello world";
 
         // undefined mistake
-        //  nl = new Nullable(s);
+        // nl = new Nullable(s);
         // nl.run();
         Nullable nl1 = new Nullable(s1);
         nl1.run();
