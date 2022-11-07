@@ -3,10 +3,11 @@ package K_CollectionClass;
 public class Student {
     private String name;
     private int note;
-
-    Student(String name, int note){
+    private int no;
+    Student(int no, String name, int note){
         this.note = note;
         this.name = name;
+        this.no = no;
     }
 
     public int getNote(){return note;}

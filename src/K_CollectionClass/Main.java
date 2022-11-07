@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
         /*
         // set interface => unique elements
         // order is not imported it can be complex
@@ -131,6 +132,7 @@ public class Main {
 
          */
 
+        /*
         PriorityQueue<String> p = new PriorityQueue<>(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -152,5 +154,39 @@ public class Main {
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
+
+         */
+
+        /*
+            Hash Maps
+
+        Map<String, String> country = new HashMap<>();
+        country.put("TR", "TURKEY");
+        country.put("GR", "Germany");
+        country.put("En", "England");
+
+        System.out.println(country.get("TR"));
+
+        for(String key : country.keySet())
+            System.out.println(key);
+
+        System.out.println("###############");
+        for(String value : country.values())
+            System.out.println(value);
+        */
+
+        /*
+        LinkedHashMap
+
+
+         */
+        TreeMap<Integer, Student> students = new TreeMap<>(new OrderByNoComparator().reversed());
+        students.put(102, new Student(102,"Ahmet",100));
+        students.put(104, new Student(114,"Damla",10));
+        students.put(110, new Student(117,"Mahmut",50));
+        students.put(107, new Student(117,"Kerem",40));
+
+        for(Student std : students.values())
+            System.out.println(std.getName());
     }
 }
