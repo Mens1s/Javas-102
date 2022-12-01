@@ -1,0 +1,4 @@
+This text will be added to output stream!
+OK?
+This text will be added to output stream!
+OK?
