@@ -5,7 +5,7 @@ public class Local {
 
          class Yerel{
 
-            public int a;
+            private int a;
             public Yerel(int a){
                 this.a = a;
             }
