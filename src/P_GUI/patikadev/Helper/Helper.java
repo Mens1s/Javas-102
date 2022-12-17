@@ -47,6 +47,10 @@ public class Helper {
                 msg = "İşlem Başarısız!";
                 title = "Başarısız";
                 break;
+            case "type":
+                msg = "Girdiğiniz veri türü doğru değil lütfen kontrol ediniz!";
+                title = "Başarısız";
+                break;
             case "duplicate":
                 msg = "Aynı kullanıcı adında birden fazla Kullanıcı bulunamaz! Kontrol Ediniz!";
                 title = "Başarısız";
@@ -58,7 +62,23 @@ public class Helper {
         JOptionPane.showMessageDialog(null, msg, title, JOptionPane.INFORMATION_MESSAGE);
     }
 
+    public static boolean confirm(String str){
+        optionPageTR();
+        String msg;
+        switch (str){
+            case "sure":
+                msg = "Bu işlemi gerçekleştirmek istediğinize emin misiniz?";
+                break;
+            default:
+                msg = str;
+        }
+        return JOptionPane.showConfirmDialog(null , msg , "Son Kararın Mı ? ", JOptionPane.YES_NO_OPTION) == 0;
+    }
+
     public static void optionPageTR(){
         UIManager.put("OptionPane.okButtonText", "Tamam");
+        UIManager.put("OptionPane.yesButtonText", "Evet");
+        UIManager.put("OptionPane.noButtonText", "Hayır");
     }
+
 }

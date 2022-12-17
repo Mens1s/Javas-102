@@ -1,0 +1,111 @@
+package P_GUI.patikadev.Model;
+
+import P_GUI.patikadev.Helper.DBConnector;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class Patika {
+    private int id;
+    private String name;
+
+    public Patika(int id, String name){
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId(){return id;}
+    public void setId(int id){ this.id = id;}
+
+    public String getName(){ return name;}
+    public void setName(String name){ this.name = name;}
+
+    public static ArrayList<Patika> getList(){
+        String query = "SELECT * FROM patika";
+        ArrayList<Patika> patikaList = new ArrayList<>();
+        Patika obj;
+
+        try {
+            Statement st = DBConnector.getInstance().createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()){
+                obj = new Patika(rs.getInt("id"), rs.getString("name"));
+                patikaList.add(obj);
+            }
+
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return patikaList;
+    }
+
+    public static boolean add(String name){
+        String query = "INSERT INTO patika (name) VALUES (?)";
+
+        try {
+            PreparedStatement pr = DBConnector.getInstance().prepareStatement(query);
+            pr.setString(1, name);
+
+            return pr.executeUpdate() != -1;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return true;
+    }
+
+    public static boolean update(int id, String name){
+        String query = "UPDATE patika SET name = ? WHERE id = ?";
+
+        try{
+            PreparedStatement pr = DBConnector.getInstance().prepareStatement(query);
+            pr.setString(1, name);
+            pr.setInt(2, id);
+
+            return pr.executeUpdate() != -1;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return true;
+    }
+
+    public static Patika getFetch(int id){
+        String query = "SELECT * FROM patika WHERE id = ?";
+        Patika obj = null;
+
+        try {
+            PreparedStatement pr = DBConnector.getInstance().prepareStatement(query);
+            pr.setInt(1,id);
+            ResultSet rs = pr.executeQuery();
+
+            if (rs.next())
+                obj = new Patika(rs.getInt("id"), rs.getString("name"));
+
+
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return obj;
+    }
+
+    public static boolean delete(int id){
+        String query = "DELETE FROM patika WHERE id = ?";
+        ArrayList<Course> courseList = Course.getList();
+        for(Course obj : courseList)
+            if(obj.getPatika().getId() == id)
+                Course.delete(String.valueOf(obj.getId()));
+
+
+        try{
+            PreparedStatement pr = DBConnector.getInstance().prepareStatement(query);
+            pr.setInt(1,id);;
+            return pr.executeUpdate() != -1;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return true;
+    }
+}
