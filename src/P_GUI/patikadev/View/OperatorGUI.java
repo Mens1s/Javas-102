@@ -233,6 +233,7 @@ public class OperatorGUI extends JFrame {
         });
         btn_logout.addActionListener(e -> {
             dispose();
+            new LoginGUI();
         });
         btn_patika_add.addActionListener(e -> {
              if (Helper.isFieldEmpty(fld_patika_name))
@@ -336,17 +337,6 @@ public class OperatorGUI extends JFrame {
         cmb_course_user.removeAllItems();
         for(User obj : User.getListOnlyEducator())
             cmb_course_user.addItem(new Item(obj.getId(), obj.getName()));
-    }
-    public static void main(String[] args) {
-        Helper.setLayout();
-        Operator op = new Operator();
-
-        op.setId(1);
-        op.setName("Ahmet Yigit");
-        op.setPass("1234");
-        op.setType("operator");
-        op.setUname("mens1s");
-        OperatorGUI opGUI = new OperatorGUI(op);
     }
 
 }
