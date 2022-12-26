@@ -5,4 +5,6 @@ public class Config {
     public static final String DB_URL = "jdbc:mysql://localhost/patika";
     public static final String DB_USER = "root";
     public static final String DB_PASSWORD = "mysql";
+
+
 }
